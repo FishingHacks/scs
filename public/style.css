@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Inconsolata:wght@200&display=swap");
+:root {
+  --green: #438845;
+  --background: #222;
+  --textcol: #fff;
+  --linkcol: rgb(156, 156, 250);
+  overflow-x: hidden;
+}
+
+.content {
+  margin: 10px;
+}
+
+.searchTitle {
+  margin-bottom: 4px;
+}
+
+a:not(.navlink):not(.primary):not(.nla) {
+  color: var(--linkcol);
+  text-decoration: none;
+  background-image: linear-gradient(90deg, red, blue);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 0% 8%;
+  transition: background-size 500ms ease-in-out;
+}
+
+a:not(.navlink):not(.primary):not(.nla):hover,
+a:not(.navlink):not(.primary):not(.nla):focus {
+  background-size: 100% 8%;
+}
+
+body {
+  background-color: var(--background);
+}
+
+p {
+  color: var(--textcol);
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+path {
+  fill: var(--textcol);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--textcol);
+  font-family: "Inconsolata", monospace;
+}
+
+.primary {
+  background-color: #111;
+  /* Green */
+  border: 2px solid var(--green);
+  color: var(--textcol);
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  border-radius: 5px;
+  transform: translateY(-8px);
+}
+
+.primary:hover {
+  background-color: #438845;
+  transform: translateY(-7px);
+}
+
+.primary:active {
+  background-color: #438845;
+  transform: translateY(-6px);
+}
+
+.navlink:visited,
+.navlink:active,
+.navlink {
+  color: var(--textcol);
+  text-decoration: none;
+}
+
+.navlink:hover {
+  color: blue;
+}
+
+.disabled {
+  color: lightgray;
+  text-decoration: line-through;
+}
+
+.disabled:hover {
+  cursor: not-allowed;
+  color: lightgray;
+  text-decoration: line-through;
+}
+
+#mobile {
+  display: none;
+}
+
+.navbar {
+  display: inline-block;
+  padding: 15px 15px 15px 18px;
+  background-color: rgb(18, 18, 75);
+  margin: -10px 0px 0px 0px;
+  padding-right: 20px;
+  width: 97.7%;
+}
+
+.navbar > h1 {
+  margin: 0;
+  margin-left: 10px;
+  padding: 0;
+  display: inline;
+}
+
+.navbar > ul {
+  margin: 0;
+  padding: 0;
+  transform: translateY(-10px);
+  display: inline;
+}
+
+.navitem {
+  display: block;
+  float: right;
+  padding: 0 10px;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+.avatar {
+  margin-right: 10px;
+  overflow: hidden;
+  border: solid 0px green;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  transform: translateY(3px);
+}
+
+.logout {
+  padding: 6px 10px;
+}
+
+.u_d {
+  margin: 0px 0px 0px 0px;
+}
+
+#searchwrapper {
+  width: 50%;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+}
+
+.result > a {
+  padding: 15px;
+  border: 2px solid green;
+  box-sizing: content-box;
+  border-radius: 10px 10px 10px 10px;
+  width: 40%;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.result>a:hover {
+  background-color: green;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1000px) {
+  .navitem {
+    display: block;
+    float: unset;
+    padding: 5px 5px 5px 5px;
+  }
+  .navbar > ul {
+    display: none;
+    transform: translateY(10px);
+    padding-bottom: 5px;
+  }
+  .navbar {
+    display: block;
+    padding: 15px 15px 15px 15px;
+    background-color: #111;
+    margin: -10px;
+  }
+  .navbar > .toggled {
+    display: block;
+  }
+  #mobile {
+    display: inline;
+    background-color: #111;
+    float: left;
+    padding-right: 10px;
+    transform: translateY(5px);
+  }
+  .hide {
+    display: none !important;
+  }
+  #searchwrapper {
+    width: 100%;
+  }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00b4cc;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9dbfaf;
+}
+
+.searchTerm:focus {
+  color: #00b4cc;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00b4cc;
+  background: #00b4cc;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
